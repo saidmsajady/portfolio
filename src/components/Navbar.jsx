@@ -4,17 +4,14 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <header className="header">
-      <a href='/' className="logo">Logo</a>
-      
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#technologies">Technologies</a></li>
-          <li><a href="#contactme">Contact Me</a></li>
-        </ul>
+      <a href='/' className="logo">Said</a>
+
+      <nav className="navbar">
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#technologies">Technologies</a>
+          <a href="#contactme">Contact Me</a>
       </nav>
     </header>
   );

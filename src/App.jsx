@@ -9,10 +9,62 @@ function App() {
       <Navbar />
 
       {/* Header Section */}
-      <header id="home">
-        <h1>This is Said Masih Sajady</h1>
-        <h2>Developer | Innovator | Problem Solver</h2>
+      <header className="hero">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1>This is</h1>
+            <h1>Said Masih Sajady</h1>
+            <h2>Developer | Innovator | Problem Solver</h2>
+            <h3>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia bibendum nulla sed consectetur. Aenean euismod bibendum laoreet.
+            </h3>
+          </div>
+          <div className="hero-image">
+            {/* Add your image source below */}
+            <img src="./assets/your-image.jpg" alt="Said Masih Sajady" />
+          </div>
+        </div>
       </header>
+
+
+      {/* <li>Lara Concrete LLC - Website Rebranding</li> */}
+      {/* Projects Section */}
+      
+
+      {/* <li>Lara Concrete LLC - Website Rebranding</li> */}
+      {/* Projects Section */}
+      <section className="projects">
+        <h1>Projects</h1>
+
+        <div className="project">
+          <img src="./assets/exploremate.jpg" alt="Explore Mate Project" className="project-image" />
+          <div className="project-details">
+            <h2>Explore Mate | Full Stack Backpacking Trip Planner</h2>
+            <p><strong>July 2024 - Sept. 2024</strong></p>
+            <p>
+              Developed a full-stack MERN application tailored for backpacking trips, featuring authentication, trip reordering, 
+              and integration with third-party APIs for an enhanced travel planning experience.
+            </p>
+            <p><strong>Tech Stack:</strong> React, Node.js, Express, MongoDB, JWT</p>
+            <a href="https://yourprojectlink.com" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
+          </div>
+        </div>
+
+        <div className="project project-reverse">
+          <div className="project-details">
+            <h2>FreeSense | Author Portfolio Website</h2>
+            <p><strong>Jan. 2024 - Mar. 2024</strong></p>
+            <p>
+              Led a team of two developers to build an interactive portfolio website for an author, integrating dynamic, user-friendly 
+              elements to showcase and sell his book.
+            </p>
+            <p><strong>Tech Stack:</strong> React, Node.js, Express, HTML/SCSS</p>
+            <a href="https://yourprojectlink.com" target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
+          </div>
+          <img src="./assets/freesense.jpg" alt="FreeSense Project" className="project-image" />
+        </div>
+
+      </section>
 
       {/* Education Section */}
       <section id="education">
@@ -27,45 +79,6 @@ function App() {
           <li>Cascadia College</li>
           <p>Associates in Intergraded Studies and Running Start Student</p>
           <p>Sep. 2020 - Jun. 2022</p>
-        </ul>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects">
-        <h1>Projects</h1>
-        <ul>
-          <li>Lara Concrete LLC - Website Rebranding</li>
-          <li>
-            <h2>Explore Mate | Full Stack Backpacking Trip Planner</h2>
-            <p><strong>July 2024 - Sept. 2024</strong> | <a href="https://yourprojectlink.com" target="_blank" rel="noopener noreferrer">View Site</a></p>
-            <p>
-              Developed a full-stack MERN application tailored for backpacking trips, featuring authentication, trip reordering, 
-              and integration with third-party APIs for an enhanced travel planning experience.
-            </p>
-            <p><strong>Tech Stack:</strong> React, Node.js, Express, Mongoose, JWT, REST API, HTML/CSS</p>
-            <ul>
-              <li>Engineered a scalable Node.js + Express backend for seamless trip management.</li>
-              <li>Implemented secure JWT-based authentication for multi-device login.</li>
-              <li>Boosted front-end performance through lazy loading and efficient state management.</li>
-              <li>Designed a mobile-responsive UI for travel planning on any device.</li>
-            </ul>
-          </li>
-
-          <li>
-            <h2>FreeSense | Author Portfolio Website</h2>
-            <p><strong>Jan. 2024 - Mar. 2024</strong> | <a href="https://yourprojectlink.com" target="_blank" rel="noopener noreferrer">View Site</a></p>
-            <p>
-              Led a team of two developers to build an interactive portfolio website for an author, integrating dynamic, user-friendly 
-              elements to showcase and sell his book.
-            </p>
-            <p><strong>Tech Stack:</strong> React, Node.js, Express, HTML/SCSS, Nodemailer</p>
-            <ul>
-              <li>Managed Agile sprints and task distribution to ensure timely delivery.</li>
-              <li>Developed an optimized React UI with lazy loading and code splitting.</li>
-              <li>Integrated animations and interactive contact forms for an engaging experience.</li>
-              <li>Collaborated closely with the author to align the website with his brand.</li>
-            </ul>
-          </li>
         </ul>
       </section>
 
