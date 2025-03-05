@@ -9,6 +9,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+
 }
 
 body {
@@ -23,13 +24,19 @@ a {
   text-decoration: none;
 }
 
+#title {
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 2.5rem; 
+  color: #fff; 
+}
+
 /* Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(to bottom, #84b581, #9dc0cb);
   padding: 0 10%;
 }
 
@@ -82,69 +89,52 @@ a {
 /* Projects Section */
 .projects {
   padding: 80px 10%;
-  background: #f8f9fa; /* Light neutral background */
+  background: inherit;
 }
 
-.projects h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: #333;
-}
-
-.project {
+.project-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 40px;
   margin-bottom: 60px;
+  justify-content: center;
 }
 
-.project-reverse {
-  flex-direction: row-reverse; /* Alternates the layout */
+.project-container.reverse {
+  flex-direction: row-reverse;
 }
 
 .project-image {
-  width: 50%;
+  width: 40%;
   max-width: 500px;
-  height: auto;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.project-image:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+.project-content {
+  width: 30%;
 }
 
-.project-details {
-  width: 50%;
-}
-
-.project-details h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.project-details p {
-  font-size: 1rem;
-  color: #666;
+.project-content h2 {
+  font-size: 1.9rem; 
+  color: #fff; 
   margin-bottom: 10px;
-  line-height: 1.6;
 }
 
-.project-link {
-  display: inline-block;
+.project-content p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.project-content ul {
   margin-top: 10px;
-  padding: 10px 20px;
-  background: #4CAF50;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease-in-out;
+  padding-left: 20px;
 }
 
-.project-link:hover {
-  background: #45a049;
+.project-content ul li {
+  font-size: 1rem; 
+  color: #f0f0f0;
+  margin-bottom: 5px;
 }
