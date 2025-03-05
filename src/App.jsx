@@ -2,6 +2,16 @@ import React from "react";
 import Navbar from "./components/Navbar"; 
 import ExploreMateImage from "./assets/ExploreMate.png";
 import FreeSenseImage from "./assets/FreeSense.png";
+import python from './assets/logos/python.svg';
+import java from './assets/logos/java.svg';
+import react from './assets/logos/react.svg';
+import node from './assets/logos/node.svg';
+import javascript from './assets/logos/javascript.svg';
+import sql from './assets/logos/sql.svg';
+import html from './assets/logos/html.svg';
+import css from './assets/logos/css.svg';
+import mongodb from './assets/logos/mongodb.svg';
+import git from './assets/logos/git.svg';
 
 function App() {
 
@@ -115,8 +125,32 @@ function App() {
             </p>
           </div>
         </div>
+
+        {/* Technologies Section */}
+        <h2 className="tech-stack-title">Technologies</h2>
+        <div className="tech-stack">
+        <img src={python} alt="Python" className="tech-icon" />
+        <img src={java} alt="Java" className="tech-icon" />
+        <img src={react} alt="React" className="tech-icon" />
+        <img src={node} alt="Node.js" className="tech-icon" />
+        <img src={javascript} alt="JavaScript" className="tech-icon" />
+        <img src={sql} alt="SQL" className="tech-icon" />
+        <img src={html} alt="HTML5" className="tech-icon" />
+        <img src={css} alt="CSS3" className="tech-icon" />
+        <img src={mongodb} alt="MongoDB" className="tech-icon" />
+        <img src={git} alt="Git" className="tech-icon" />
+        </div>
+
       </section>
 
+      {/* Technologies Section */}
+      <section id="technologies">
+        <h1>Technologies</h1>
+        <p><strong>Technogies and Frameworks: </strong>Java, Python, JavaScript, React, HTML/CSS, Node.js, Express, SQL</p>
+        <p><strong>Tools and Platforms: </strong>MongoDB, Rest API, FireBase, Render, Git/GitHub, VS Code</p>
+      </section>
+
+      
 
       {/* Experience Section */}
       <section id="experience">
@@ -151,13 +185,6 @@ function App() {
             </ul>
           </li>
         </ul>
-      </section>
-
-      {/* Technologies Section */}
-      <section id="technologies">
-        <h1>Technologies</h1>
-        <p><strong>Technogies and Frameworks: </strong>Java, Python, JavaScript, React, HTML/CSS, Node.js, Express, SQL</p>
-        <p><strong>Tools and Platforms: </strong>MongoDB, Rest API, FireBase, Render, Git/GitHub, VS Code</p>
       </section>
 
       {/* Contact Me Section */}

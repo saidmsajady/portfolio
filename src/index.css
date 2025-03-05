@@ -154,8 +154,8 @@ a {
 
 /* Education Section */
 #education {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 80px 10%;
+  background: inherit;
+  padding: 50px 6%;
   border-radius: 10px;
 }
 
@@ -163,21 +163,22 @@ a {
   font-size: 2.5rem;
   color: #fff;
   text-align: center;
-  margin-bottom: 40px; /* Added more space for better separation */
+  margin-bottom: 40px;
 }
 
-/* Flex Layout for Vertical Sections */
+/* Flex Layout for Horizontal Sections */
 .education-container {
   display: flex;
-  flex-direction: column; /* Stack the items vertically */
-  gap: 40px; /* Space between each section */
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .education-item {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
 }
 
 .education-item h2 {
@@ -195,11 +196,35 @@ a {
 
 .education-item .date-range {
   font-size: 1.1rem;
-  color: #a0a0a0;
+  color: #f0f0f0;
 }
 
 .education-item .description {
   font-size: 1.2rem;
   color: #f0f0f0;
   margin-top: 10px;
+}
+
+/* Technologies Section */
+.tech-stack-title {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tech-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
