@@ -14,7 +14,7 @@ function App() {
       <header className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>This is</h1>
+            <h2>This is</h2>
             <h1>Said Masih Sajady</h1>
             <h2>Developer | Innovator | Problem Solver</h2>
             <h3>
@@ -31,7 +31,7 @@ function App() {
       {/* <li>Lara Concrete LLC - Website Rebranding</li> */}
 
       {/* Projects Section */}
-      <section id="projects">
+      <section id="projects" className="section-divider">
         <h1 id="title">Projects</h1>
 
         {/* Explore Mate - Image Left, Content Right */}
@@ -46,14 +46,16 @@ function App() {
             </p>
             <br/>
             <p><strong>Tech Stack:</strong> React, Node.js, Express, Mongoose, JWT, REST API, HTML/CSS</p>
-            <ul>
+            {/* <ul>
               <li>Engineered a scalable Node.js + Express backend for seamless trip management.</li>
               <li>Implemented secure JWT-based authentication for multi-device login.</li>
               <li>Boosted front-end performance through lazy loading and efficient state management.</li>
               <li>Designed a mobile-responsive UI for travel planning on any device.</li>
-            </ul>
+            </ul> */}
           </div>
         </div>
+
+        <hr/>
 
         {/* FreeSense - Image Right, Content Left */}
         <div className="project-container project-reverse">
@@ -67,12 +69,12 @@ function App() {
             </p>
             <br/>
             <p><strong>Tech Stack:</strong> React, Node.js, Express, HTML/SCSS, Nodemailer</p>
-            <ul>
+            {/* <ul>
               <li>Managed Agile sprints and task distribution to ensure timely delivery.</li>
               <li>Developed an optimized React UI with lazy loading and code splitting.</li>
               <li>Integrated animations and interactive contact forms for an engaging experience.</li>
               <li>Collaborated closely with the author to align the website with his brand.</li>
-            </ul>
+            </ul> */}
           </div>
           <img src={FreeSenseImage} alt="FreeSense Project" className="project-image"/>
         </div>
@@ -81,18 +83,40 @@ function App() {
       {/* Education Section */}
       <section id="education">
         <h1>Education</h1>
-        <ul>
-          <li>University of Washington</li>
-          <p>Bachelors in Computer Science and Software Engineering</p>
-          <p>Sep. 2022 - Dec. 2024</p>
-          <li>Per Scholas</li>
-          <p>Accelerated and Competitive Software Engineering Boot Camp</p>
-          <p>Apr. 2024 - Aug. 2024</p>
-          <li>Cascadia College</li>
-          <p>Associates in Intergraded Studies and Running Start Student</p>
-          <p>Sep. 2020 - Jun. 2022</p>
-        </ul>
+
+        <div className="education-container">
+          {/* University of Washington */}
+          <div className="education-item">
+            <h2>University of Washington</h2>
+            <p className="degree">Bachelors in Computer Science and Software Engineering</p>
+            <p className="date-range">Sep. 2022 - Dec. 2024</p>
+            <p className="description">
+              Developing skills in software engineering, algorithms, and data structures, focusing on hands-on projects.
+            </p>
+          </div>
+
+          {/* Per Scholas */}
+          <div className="education-item">
+            <h2>Per Scholas</h2>
+            <p className="degree">Accelerated and Competitive Software Engineering Boot Camp</p>
+            <p className="date-range">Apr. 2024 - Aug. 2024</p>
+            <p className="description">
+              Intensive coding boot camp focused on full-stack development and real-world problem-solving.
+            </p>
+          </div>
+
+          {/* Cascadia College */}
+          <div className="education-item">
+            <h2>Cascadia College</h2>
+            <p className="degree">Associates in Integrated Studies and Running Start Student</p>
+            <p className="date-range">Sep. 2020 - Jun. 2022</p>
+            <p className="description">
+              Completed an accelerated high school and college program, taking advanced courses in computer science.
+            </p>
+          </div>
+        </div>
       </section>
+
 
       {/* Experience Section */}
       <section id="experience">
