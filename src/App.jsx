@@ -13,7 +13,16 @@ import css from './assets/logos/css.svg';
 import mongodb from './assets/logos/mongodb.svg';
 import git from './assets/logos/git.svg';
 
+import timelineElements from "./timeline/timelineElements";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import WorkIcon from "./assets/work.svg"; 
+
+
 function App() {
+
+  let workIconStyles = { background: "#06D6A0" };
+  let schoolIconStyles = { background: "#f9c74f" };
 
   return (
     <>
@@ -49,7 +58,7 @@ function App() {
         <img src={ExploreMateImage} alt="Explore Mate Project" className="project-image" />
         <div className="project-content">
             <h2>Explore Mate | Full Stack Backpacking Trip Planner</h2>
-            <p><strong>July 2024 - Sept. 2024</strong> | <a href="https://yourprojectlink.com" target="_blank" rel="noopener noreferrer">View Site</a></p>
+            <p><strong>July 2024 - Sept. 2024</strong> | <a href="https://explore-mate-site.web.app/" target="_blank" rel="noopener noreferrer" className="resume-link">View Site</a></p>
             <br/>
             <p>
               Developed a full-stack MERN application tailored for backpacking trips, featuring authentication, trip reordering, and integration with third-party APIs for an enhanced travel planning experience.
@@ -70,8 +79,8 @@ function App() {
         {/* FreeSense - Image Right, Content Left */}
         <div className="project-container project-reverse">
           <div className="project-content">
-            <h2>FreeSense | Author Portfolio Website</h2>
-            <p><strong>Jan. 2024 - Mar. 2024</strong> | <a href="https://yourprojectlink.com" target="_blank" rel="noopener noreferrer">View Site</a></p>
+            <h2 className="">FreeSense | Author Portfolio Website</h2>
+            <p><strong>Jan. 2024 - Mar. 2024</strong> | <a href="https://www.freesensebook.com/" target="_blank" rel="noopener noreferrer" className="resume-link">View Site</a></p>
             <br/>
             <p>
               Led a team of two developers to build an interactive portfolio website for an author, integrating dynamic, user-friendly 
@@ -92,7 +101,7 @@ function App() {
 
       {/* Education Section */}
       <section id="education">
-        <h1>Education</h1>
+        <h1 id="education-title">Education</h1>
 
         <div className="education-container">
           {/* University of Washington */}
@@ -127,7 +136,7 @@ function App() {
         </div>
 
         {/* Technologies Section */}
-        <h2 className="tech-stack-title">Technologies</h2>
+        <p className="tech-stack-title">Throughout my journey at places like the University of Washington, Per Scholas, and Cascadia College, I’ve had the opportunity to dive deep into a wide range of technologies. From building full-stack applications to solving real-world problems, I’ve gained hands-on experience with everything from Python to React. Here’s a snapshot of the tools and technologies I’ve worked with along the way!</p>
         <div className="tech-stack">
         <img src={python} alt="Python" className="tech-icon" />
         <img src={java} alt="Java" className="tech-icon" />
@@ -143,54 +152,59 @@ function App() {
 
       </section>
 
-      {/* Technologies Section */}
-      <section id="technologies">
-        <h1>Technologies</h1>
-        <p><strong>Technogies and Frameworks: </strong>Java, Python, JavaScript, React, HTML/CSS, Node.js, Express, SQL</p>
-        <p><strong>Tools and Platforms: </strong>MongoDB, Rest API, FireBase, Render, Git/GitHub, VS Code</p>
-      </section>
 
-      
-
-      {/* Experience Section */}
-      <section id="experience">
-        <h1>Experience</h1>
-        <ul>
-          <li>
-            <h2>Freelancer – Software Engineer</h2>
-            <p><strong>Dec. 2023 - Present</strong></p>
-            <ul>
-              <li>Effectively communicate with clients to fully understand their vision, expectations, and deadlines for web applications.</li>
-              <li>Led the technical implementation of project requirements, ensuring seamless back-end and front-end integration.</li>
-            </ul>
-          </li>
-
-          <li>
-            <h2>University of Washington – Teaching Assistant</h2>
-            <p><strong>Mar. 2024 - Jun. 2024</strong></p>
-            <p><em>Hardware and Computer Organization</em></p>
-            <ul>
-              <li>Curated a comprehensive repository of hardware resources and tutorials, utilized by 60+ students weekly.</li>
-              <li>Provided ongoing support through class time and office hours, with the repository continuing to assist future cohorts.</li>
-              <li>Initiated and facilitated group study sessions, contributing to a 20% improvement in course satisfaction ratings.</li>
-            </ul>
-          </li>
-
-          <li>
-            <h2>Flo Japanese Sushi and Sake Restaurant – Server & Staff Supervisor</h2>
-            <p><strong>Oct. 2021 - Jun. 2024</strong></p>
-            <ul>
-              <li>Led the development of a new communication strategy that improved task accuracy and team collaboration within a 12-member team.</li>
-              <li>Implemented process improvements later adopted by other restaurant locations, leading to near 100% customer satisfaction.</li>
-            </ul>
-          </li>
-        </ul>
+      {/* Experience Section with Timeline */}
+      <section className="experience section-divider">
+        <h1 id="experience-title">Experience</h1>
+        <VerticalTimeline>
+          {timelineElements.map((element) => {
+            let isWorkIcon = element.icon === "work";
+            return (
+              <VerticalTimelineElement
+                key={element.id}
+                date={element.date}
+                iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+                icon={<img src={isWorkIcon ? WorkIcon : SchoolIcon} alt="Icon" />}
+              >
+                <h3 className="vertical-timeline-element-title">{element.title}</h3>
+                <h5 className="vertical-timeline-element-subtitle">{element.location}</h5>
+                <p>{element.description}</p>
+              </VerticalTimelineElement>
+            );
+          })}
+        </VerticalTimeline>
       </section>
 
       {/* Contact Me Section */}
-      <section id="contactme">
-        {/* tbd */}
+      <section id="contactme" className="section-divider">
+        <h1>Contact Me</h1>
+        <p>
+          I'm always excited to connect with like-minded individuals and explore how we can collaborate! Whether it's discussing new projects, technology trends, or creative ideas, I'm open to conversations that can spark innovation and growth. Feel free to reach out through LinkedIn or email—I'd love to learn more about how I can contribute to your goals or just have a good chat!
+        </p>
+        <div className="social-icons">
+          <a href="https://www.linkedin.com/in/said-masih-sajady/" aria-label="LinkedIn" target='_blank'>
+            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" className="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" color="#4d4d4e">
+              <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+            </svg>
+          </a>
+          <a href="mailto:s.saidmasih@gmail.com" aria-label="Email">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" className="icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" color="#4d4d4e">
+              <path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
+            </svg>
+          </a>
+        </div>
+
+        {/* Resume Link */}
+        <a href="/path/to/your/resume.pdf" className="resume-link" target="_blank" rel="noopener noreferrer">
+          View My Resume
+        </a>
+
+        <footer className="footer">
+          <p>© 2025 Said Sajady. All rights reserved.</p>
+        </footer>
       </section>
+
+
     </>
   );
 }
