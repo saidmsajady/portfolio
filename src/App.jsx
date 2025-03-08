@@ -13,16 +13,15 @@ import css from './assets/logos/css.svg';
 import mongodb from './assets/logos/mongodb.svg';
 import git from './assets/logos/git.svg';
 
+import mypic from './components/mypic.jpeg'
+
 import timelineElements from "./timeline/timelineElements";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import WorkIcon from "./assets/work.svg"; 
-
 
 function App() {
 
-  let workIconStyles = { background: "#06D6A0" };
-  let schoolIconStyles = { background: "#f9c74f" };
+  let schoolIconStyles = { background: "#64a08f" };
 
   return (
     <>
@@ -37,12 +36,13 @@ function App() {
             <h1>Said Masih Sajady</h1>
             <h2>Developer | Innovator | Problem Solver</h2>
             <h3>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia bibendum nulla sed consectetur. Aenean euismod bibendum laoreet.
+            I built this portfolio to present who I am—showcasing my growth as a developer and innovator. It’s been a rewarding experience, as creating this site gave me the opportunity to not only highlight my projects but also reflect on the milestones and skills that have driven my journey so far. Whether it’s through new challenges or collaborations, I’m always excited about the next step. Take a look around, and let’s connect!
             </h3>
           </div>
           <div className="hero-image">
-            {/* Add your image source below */}
-            <img src="./assets/your-image.jpg" alt="Said Masih Sajady" />
+            <div className="diamond-container">
+              <img src={mypic} alt="Said Masih Sajady" />
+            </div>
           </div>
         </div>
       </header>
@@ -58,7 +58,18 @@ function App() {
         <img src={ExploreMateImage} alt="Explore Mate Project" className="project-image" />
         <div className="project-content">
             <h2>Explore Mate | Full Stack Backpacking Trip Planner</h2>
-            <p><strong>July 2024 - Sept. 2024</strong> | <a href="https://explore-mate-site.web.app/" target="_blank" rel="noopener noreferrer" className="resume-link">View Site</a></p>
+            <p style={{ display: "flex",  alignItems: "center", gap: "30px" }}>
+            <strong>July 2024 - Sept. 2024</strong>
+            <a 
+              href="https://explore-mate-site.web.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="project-button"
+            >
+              View Site
+            </a>
+          </p>
+
             <br/>
             <p>
               Developed a full-stack MERN application tailored for backpacking trips, featuring authentication, trip reordering, and integration with third-party APIs for an enhanced travel planning experience.
@@ -80,7 +91,17 @@ function App() {
         <div className="project-container project-reverse">
           <div className="project-content">
             <h2 className="">FreeSense | Author Portfolio Website</h2>
-            <p><strong>Jan. 2024 - Mar. 2024</strong> | <a href="https://www.freesensebook.com/" target="_blank" rel="noopener noreferrer" className="resume-link">View Site</a></p>
+            <p style={{ display: "flex", alignItems: "center", gap: "30px" }}>
+              <strong>Jan. 2024 - Mar. 2024</strong>
+              <a 
+                href="https://www.freesensebook.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="project-button"
+              >
+                View Site
+              </a>
+            </p>
             <br/>
             <p>
               Led a team of two developers to build an interactive portfolio website for an author, integrating dynamic, user-friendly 
@@ -106,7 +127,7 @@ function App() {
         <div className="education-container">
           {/* University of Washington */}
           <div className="education-item">
-            <h2>University of Washington</h2>
+            <h2 className="education-title">University of Washington</h2>
             <p className="degree">Bachelors in Computer Science and Software Engineering</p>
             <p className="date-range">Sep. 2022 - Dec. 2024</p>
             <p className="description">
@@ -116,7 +137,7 @@ function App() {
 
           {/* Per Scholas */}
           <div className="education-item">
-            <h2>Per Scholas</h2>
+            <h2 className="education-title">Per Scholas</h2>
             <p className="degree">Accelerated and Competitive Software Engineering Boot Camp</p>
             <p className="date-range">Apr. 2024 - Aug. 2024</p>
             <p className="description">
@@ -126,7 +147,7 @@ function App() {
 
           {/* Cascadia College */}
           <div className="education-item">
-            <h2>Cascadia College</h2>
+            <h2 className="education-title">Cascadia College</h2>
             <p className="degree">Associates in Integrated Studies and Running Start Student</p>
             <p className="date-range">Sep. 2020 - Jun. 2022</p>
             <p className="description">
@@ -152,27 +173,38 @@ function App() {
 
       </section>
 
-
       {/* Experience Section with Timeline */}
-      <section className="experience section-divider">
+      <section id="experience" className="experience section-divider">
         <h1 id="experience-title">Experience</h1>
         <VerticalTimeline>
-          {timelineElements.map((element) => {
-            let isWorkIcon = element.icon === "work";
-            return (
-              <VerticalTimelineElement
-                key={element.id}
-                date={element.date}
-                iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
-                icon={<img src={isWorkIcon ? WorkIcon : SchoolIcon} alt="Icon" />}
-              >
-                <h3 className="vertical-timeline-element-title">{element.title}</h3>
-                <h5 className="vertical-timeline-element-subtitle">{element.location}</h5>
+        {timelineElements.map((element) => {
+          let isWorkIcon = element.icon === "work";
+          return (
+            <VerticalTimelineElement
+              key={element.id}
+              date={element.date}
+              iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+              dateStyle={{ color: "#f0f0f0" }}
+            >
+              <h3 className="vertical-timeline-element-title">{element.title}</h3>
+              <h5 className="vertical-timeline-element-subtitle">{element.location}</h5>
+
+              {/* Description handling */}
+              {Array.isArray(element.description) ? (
+                element.description.map((desc, index) => (
+                  <React.Fragment key={index}>
+                    <p>{desc}</p>
+                    {index < element.description.length - 1 && <br />}
+                  </React.Fragment>
+                ))
+              ) : (
                 <p>{element.description}</p>
-              </VerticalTimelineElement>
-            );
-          })}
-        </VerticalTimeline>
+              )}
+            </VerticalTimelineElement>
+          );
+        })}
+      </VerticalTimeline>
+
       </section>
 
       {/* Contact Me Section */}
