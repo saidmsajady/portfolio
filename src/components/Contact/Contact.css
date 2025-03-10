@@ -1,0 +1,97 @@
+#contactme {
+    /* background-color: rgba(148, 132, 132, 0.1); */
+    padding: 40px 28%;
+    text-align: center;
+  }
+  
+  #contactme h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  #contactme p {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-bottom: 40px;
+  }
+  
+  .contact-links a {
+    font-size: 1.2rem;
+    color: #06392b;
+    margin: 0 15px;
+  }
+  
+  .contact-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 45px;
+    margin-top: 15px;
+    padding-bottom: 30px;
+  }
+  
+  .social-icons svg {
+    width: 90px;
+    height: auto;
+    transition: transform 0.3s ease;
+    color: #57a18c;
+  }
+  
+  .social-icons svg:hover {
+    transform: scale(1.1);
+  }
+
+  .resume-link {
+    position: relative;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px; /* Add padding to give space around the text */
+    border: 2px solid transparent; /* Set the initial border to transparent */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+  }
+  
+  .resume-link::before,
+  .resume-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  .resume-link::before {
+    top: 0;
+    left: 0;
+  }
+  
+  .resume-link::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .resume-link:hover::before,
+  .resume-link:hover::after {
+    width: 100%; /* Expand both top and bottom borders */
+  }
+  
+  .resume-link:hover {
+    border-color: #fff; /* Make the borders visible when hovering */
+  }
+  
+  
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 50px;
+  }

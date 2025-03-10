@@ -1,0 +1,39 @@
+.experience {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 40px 10%;
+    border-radius: 10px;
+}
+  
+#experience-title {
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+}
+  
+.vertical-timeline-element-date {
+    font-size: 1.2rem !important;
+    color: #ffffff;
+}
+
+.vertical-timeline-element-title {
+    font-family: 'Raleway', sans-serif;  
+    font-size: 1.6rem;
+    font-weight: 600;  
+    color: #57a18c;
+}
+  
+.vertical-timeline-element-subtitle {
+    font-family: 'Roboto', sans-serif;  
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #57a18c;
+}
+  
+.vertical-timeline-element-content p {
+    font-family: 'Roboto', sans-serif;  
+    font-size: 1rem;
+    color: #4e504f;
+    line-height: 1.5;
+}
+  

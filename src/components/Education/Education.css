@@ -1,0 +1,89 @@
+#education {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 6%;
+    border-radius: 10px;
+  }
+  
+  #education h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .education-container {
+    display: flex;
+    justify-content: center; 
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .education-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 0 1 520px; 
+    min-width: 180px;
+  }
+  
+  .education-item h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .education-item .degree {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-bottom: 8px;
+  }
+  
+  .education-item .date-range {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    margin-bottom: 15px; 
+  }
+  
+  .education-item .description {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin-top: 10px;
+  }
+
+  .tech-stack-title {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 50%; 
+    margin-left: auto; 
+    margin-right: auto;  
+  }
+  
+  .tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .tech-icon {
+    background: rgba(255, 255, 255, 0.1);
+    width: 75px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tech-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
