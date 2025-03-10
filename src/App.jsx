@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar/Navbar"; 
 import ExploreMateImage from "./assets/ExploreMate.png";
 import FreeSenseImage from "./assets/FreeSense.png";
 import python from './assets/logos/python.svg';
