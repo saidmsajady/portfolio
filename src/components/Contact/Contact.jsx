@@ -54,8 +54,8 @@ const Contact = () => {
           >
             <defs>
               <linearGradient id="linkedinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#84b581" />
-                <stop offset="100%" stop-color="#59a3ae" />
+                <stop offset="0%" stopColor="#84b581" />
+                <stop offset="100%" stopColor="#59a3ae" />
               </linearGradient>
             </defs>
             <path
@@ -73,8 +73,8 @@ const Contact = () => {
           >
             <defs>
               <linearGradient id="emailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#84b581" />
-                <stop offset="100%" stop-color="#59a3ae" />
+                <stop offset="0%" stopColor="#84b581" />
+                <stop offset="100%" stopColor="#59a3ae" />
               </linearGradient>
             </defs>
             <path

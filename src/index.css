@@ -1,5 +1,4 @@
 @import './styles/global.css';
-@import './styles/media-queries.css';
 @import './components/hero/hero.css';
 @import './components/projects/projects.css';
 @import './components/education/education.css';
