@@ -7,7 +7,10 @@ import "react-vertical-timeline-component/style.min.css";
 const Experience = () => {
 
   let workIconStyles = { background: "#f39c12" }; // Example color, adjust as needed
-  let schoolIconStyles = { background: "#64a08f" };
+  let schoolIconStyles = { 
+    background: "linear-gradient(135deg, #84b581, #59a3ae)" 
+  };
+  
   
 
   return (

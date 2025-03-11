@@ -1,7 +1,15 @@
 #contactme {
-    /* background-color: rgba(148, 132, 132, 0.1); */
+    background-color: #6ca8b149;
     padding: 40px 28%;
     text-align: center;
+    opacity: 0; /* Initially invisible */
+    transform: translateY(30px); /* Initially shifted down */
+    transition: opacity 1s ease, transform 1s ease; /* Transition effect */
+  }
+  
+  #contactme.fade-in {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
   }
   
   #contactme h1 {
@@ -16,20 +24,9 @@
     margin-bottom: 40px;
   }
   
-  .contact-links a {
-    font-size: 1.2rem;
-    color: #06392b;
-    margin: 0 15px;
-  }
-  
-  .contact-links a:hover {
-    color: #fff;
-    text-decoration: underline;
-  }
-  
   .social-icons {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     gap: 45px;
     margin-top: 15px;
@@ -40,13 +37,15 @@
     width: 90px;
     height: auto;
     transition: transform 0.3s ease;
-    color: #57a18c;
+    fill: white; /* Set a base fill color */
+    mask-image: linear-gradient(135deg, #84b581, #59a3ae);
+    -webkit-mask-image: linear-gradient(135deg, #84b581, #59a3ae);
   }
   
   .social-icons svg:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Scale effect on hover */
   }
-
+  
   .resume-link {
     position: relative;
     font-size: 22px;
@@ -87,7 +86,6 @@
     border-color: #fff; /* Make the borders visible when hovering */
   }
   
-  
   .footer {
     text-align: center;
     padding: 20px 0;
@@ -95,3 +93,49 @@
     font-size: 1rem;
     margin-top: 50px;
   }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    #contactme {
+      padding: 30px 5%;
+    }
+  
+    #contactme h1 {
+      font-size: 2.5rem; /* Smaller title on tablets */
+    }
+  
+    #contactme p {
+      font-size: 1.2rem; /* Adjust paragraph size on tablets */
+    }
+  
+    .social-icons {
+      gap: 20px;
+    }
+  
+    .social-icons svg {
+      width: 60px; /* Smaller icons on tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #contactme {
+      padding: 20px 3%;
+    }
+  
+    #contactme h1 {
+      font-size: 2rem; /* Even smaller title on mobile */
+    }
+  
+    #contactme p {
+      font-size: 1rem; /* Adjust paragraph size on mobile */
+    }
+  
+    .social-icons {
+      gap: 15px;
+    }
+  
+    .social-icons svg {
+      width: 50px; /* Smaller icons on mobile */
+    }
+  }
+  
