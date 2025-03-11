@@ -2,13 +2,13 @@
     background-color: #6ca8b149;
     padding: 40px 28%;
     text-align: center;
-    opacity: 0; /* Initially invisible */
-    transform: translateY(30px); /* Initially shifted down */
-    transition: opacity 1s ease, transform 1s ease; /* Transition effect */
+    opacity: 0; /* Hidden initially */
+    transform: translateY(30px); /* Start off below */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
   }
   
   #contactme.fade-in {
-    opacity: 1; /* Fade in */
+    opacity: 1; /* Make visible */
     transform: translateY(0); /* Move to original position */
   }
   
@@ -36,14 +36,14 @@
   .social-icons svg {
     width: 90px;
     height: auto;
-    transition: transform 0.3s ease;
-    fill: white; /* Set a base fill color */
+    transition: transform 0.3s ease; /* Hover effect */
+    fill: white;
     mask-image: linear-gradient(135deg, #84b581, #59a3ae);
     -webkit-mask-image: linear-gradient(135deg, #84b581, #59a3ae);
   }
   
   .social-icons svg:hover {
-    transform: scale(1.1); /* Scale effect on hover */
+    transform: scale(1.1); /* Enlarge on hover */
   }
   
   .resume-link {
@@ -52,9 +52,9 @@
     font-weight: 500;
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px; /* Add padding to give space around the text */
-    border: 2px solid transparent; /* Set the initial border to transparent */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease; /* Border effect */
   }
   
   .resume-link::before,
@@ -79,11 +79,11 @@
   
   .resume-link:hover::before,
   .resume-link:hover::after {
-    width: 100%; /* Expand both top and bottom borders */
+    width: 100%; /* Expand on hover */
   }
   
   .resume-link:hover {
-    border-color: #fff; /* Make the borders visible when hovering */
+    border-color: #fff; /* Show borders */
   }
   
   .footer {
@@ -94,18 +94,18 @@
     margin-top: 50px;
   }
   
-  /* Mobile responsiveness */
+  /* Tablet view */
   @media (max-width: 768px) {
     #contactme {
       padding: 30px 5%;
     }
   
     #contactme h1 {
-      font-size: 2.5rem; /* Smaller title on tablets */
+      font-size: 2.5rem;
     }
   
     #contactme p {
-      font-size: 1.2rem; /* Adjust paragraph size on tablets */
+      font-size: 1.2rem;
     }
   
     .social-icons {
@@ -113,21 +113,22 @@
     }
   
     .social-icons svg {
-      width: 60px; /* Smaller icons on tablets */
+      width: 60px;
     }
   }
   
+  /* Mobile view */
   @media (max-width: 480px) {
     #contactme {
       padding: 20px 3%;
     }
   
     #contactme h1 {
-      font-size: 2rem; /* Even smaller title on mobile */
+      font-size: 2rem;
     }
   
     #contactme p {
-      font-size: 1rem; /* Adjust paragraph size on mobile */
+      font-size: 1rem;
     }
   
     .social-icons {
@@ -135,7 +136,6 @@
     }
   
     .social-icons svg {
-      width: 50px; /* Smaller icons on mobile */
+      width: 50px;
     }
-  }
-  
+  }  
