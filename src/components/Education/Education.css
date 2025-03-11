@@ -4,8 +4,20 @@
     border-radius: 10px;
     opacity: 0; /* Initially invisible */
     transform: translateY(30px); /* Initially shifted down */
-    transition: opacity 1s ease, transform 1s ease; /* Transition effect */
+    transition: none/* Transition effect */
   }
+
+  .education-content { 
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Shifted down */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .education-content.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
   
   #education.fade-in {
     opacity: 1; /* Fade in */
