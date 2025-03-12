@@ -2,14 +2,14 @@
     background-color: #6ca8b149;
     padding: 40px 28%;
     text-align: center;
-    opacity: 0; /* Hidden initially */
-    transform: translateY(30px); /* Start off below */
-    transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: opacity 1s ease, transform 1s ease; 
   }
   
   #contactme.fade-in {
-    opacity: 1; /* Make visible */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1; 
+    transform: translateY(0); 
   }
   
   #contactme h1 {
@@ -36,14 +36,14 @@
   .social-icons svg {
     width: 90px;
     height: auto;
-    transition: transform 0.3s ease; /* Hover effect */
+    transition: transform 0.3s ease;
     fill: white;
     mask-image: linear-gradient(135deg, #84b581, #59a3ae);
     -webkit-mask-image: linear-gradient(135deg, #84b581, #59a3ae);
   }
   
   .social-icons svg:hover {
-    transform: scale(1.1); /* Enlarge on hover */
+    transform: scale(1.1); 
   }
   
   .resume-link {
@@ -54,7 +54,7 @@
     text-decoration: none;
     padding: 10px 20px;
     border: 2px solid transparent;
-    transition: border-color 0.3s ease; /* Border effect */
+    transition: border-color 0.3s ease; 
   }
   
   .resume-link::before,
@@ -79,11 +79,11 @@
   
   .resume-link:hover::before,
   .resume-link:hover::after {
-    width: 100%; /* Expand on hover */
+    width: 100%; 
   }
   
   .resume-link:hover {
-    border-color: #fff; /* Show borders */
+    border-color: #fff;
   }
   
   .footer {
@@ -97,7 +97,7 @@
   /* Tablet view */
   @media (max-width: 768px) {
     #contactme {
-      padding: 30px 5%;
+      padding: 40px 5%;
     }
   
     #contactme h1 {
@@ -120,11 +120,11 @@
   /* Mobile view */
   @media (max-width: 480px) {
     #contactme {
-      padding: 20px 3%;
+      padding: 40px 3%;
     }
   
     #contactme h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   
     #contactme p {

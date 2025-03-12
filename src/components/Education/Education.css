@@ -110,7 +110,7 @@
   /* Tablet responsiveness */
   @media (max-width: 768px) {
     #education {
-      padding: 30px 5%;
+      padding: 50px 5%;
     }
   
     .education-container {
@@ -141,7 +141,7 @@
   /* Mobile responsiveness */
   @media (max-width: 480px) {
     #education {
-      padding: 20px 3%;
+      padding: 50px 3%;
     }
   
     .tech-icon {

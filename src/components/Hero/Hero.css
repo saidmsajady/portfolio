@@ -71,6 +71,7 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero-content {
+        padding-top: 50px;
         flex-direction: column; /* Stack the text and image vertically on tablets */
         text-align: center; /* Center-align text */
     }
